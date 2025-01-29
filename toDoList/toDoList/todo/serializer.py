@@ -25,16 +25,6 @@ class TaskSerializer(serializers.ModelSerializer):
             {'id': user.id, 'username': user.username} for user in instance.users.all()
         ]
         return representation
-    # priority = serializers.PrimaryKeyRelatedField(queryset=Priority.objects.all())
-    # user = serializers.ReadOnlyField(source='user.username')
-    # class Meta:
-    #     model = Task
-    #     fields = '__all__'
-
-    # def to_representation(self, instance):
-    #     representation = super().to_representation(instance)
-    #     representation['priority'] = PrioritySerializer(instance.priority).data
-    #     return representation
-
+    
 
     
